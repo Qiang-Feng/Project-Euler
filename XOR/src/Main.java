@@ -56,7 +56,14 @@ public class Main
                     position += 1;
                 }
 
-                finalOutput += (char) (Integer.parseInt(number) ^ (int) secretChar);
+                Character temp = (char) (Integer.parseInt(number) ^ (int) secretChar);
+
+                if (!temp.toString().matches("[a-zA-z0-9\\s,().']"))
+                {
+                    break;
+                }
+
+                finalOutput += temp;
             }
 
             if (finalOutput.contains(" and "))
@@ -70,10 +77,6 @@ public class Main
                 System.out.println(total);
                 System.out.println(finalOutput);
                 finished = true;
-            }
-            else
-            {
-                System.out.println(finalOutput);
             }
 
             if (third == 'z')
