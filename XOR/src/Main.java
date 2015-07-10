@@ -14,7 +14,7 @@ public class Main
     {
         try
         {
-            byte[] encoded = Files.readAllBytes(Paths.get("N:/Project Euler/XOR/src/cipher.txt"));
+            byte[] encoded = Files.readAllBytes(Paths.get("/home/qiang/IdeaProjects/Project-Euler/XOR/src/cipher.txt"));
             characters = new String(encoded).split(",");
         }
         catch (IOException e)
@@ -69,7 +69,7 @@ public class Main
                 }
                 System.out.println(total);
                 System.out.println(finalOutput);
-                //finished = true;
+                finished = true;
             }
             else
             {
@@ -94,7 +94,7 @@ public class Main
                     }
                     else
                     {
-                        //finished = true;
+                        finished = true;
                     }
                 }
             }
